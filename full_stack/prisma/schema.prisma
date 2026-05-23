@@ -1,0 +1,123 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+
+  watchLists WatchList[]
+  predictions SharePrediction[]
+}
+
+// model Stock {
+//   id     String @id @default(cuid())
+//   userId String
+//   user   User   @relation(fields: [userId], references: [id])
+
+//   symbol String @db.VarChar(10)
+//   name   String @db.VarChar(100)
+
+//   sentiment  Sentiment
+//   confidence Float
+
+//   predictedPrice  Float
+//   predictedChange Float
+
+//   summary String @db.Text
+
+//   createdAt DateTime @default(now())
+
+//   @@index([userId])
+//   @@index([symbol])
+// }
+
+
+// model Analysis {
+//   id     String @id @default(cuid())
+//   userId String
+
+//   user      User      @relation(fields: [userId], references: [id])
+//   sentiment Sentiment
+//   confidence Float
+//   symbol String
+  
+//   predictedPrice Float
+//   predictedChange Float
+
+//   rsi Float
+//   macd Float
+
+//   createdAt DateTime @default(now())
+
+//   @@index([userId])
+//   @@index([symbol])
+// }
+
+
+model WatchList {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  symbol String @db.VarChar(10)
+  name   String @db.VarChar(100)
+  sector String @db.VarChar(50)
+
+  createdAt DateTime @default(now())
+
+  @@unique([userId, symbol])
+}
+
+enum Sentiment {
+  Bullish
+  Bearish
+  Neutral
+}
+
+model SharePrediction{
+  id String @id @default(cuid())
+
+  symbol String
+  currentPrice Float
+  predictedPrice Float
+  rangeLow Float
+  rangeHigh Float
+  confidence Float
+  horizon String
+  trend Sentiment
+  signalStrength String
+  summary String @db.Text
+  rsi Float
+  macd Float
+  macdSignal Float
+  ema50 Float
+  ema200 Float
+  bbUpper Float
+  bbMid Float
+  bbLower Float
+  stochK Float
+  stochD Float
+  atr Float
+  volumeRatio Float
+  createdAt DateTime @default(now())
+
+  userId String?
+  user   User?  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([symbol, createdAt])
+  @@index([userId])
+}
