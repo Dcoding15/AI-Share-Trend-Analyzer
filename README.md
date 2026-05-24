@@ -1,4 +1,3 @@
-```markdown
 # 📈 AI Share Trend Analyzer
 
 A full‑stack, AI‑powered equity research platform that combines **institutional‑grade quantitative analysis** with **modern web technologies**. It delivers fundamental ratios, technical signals, Monte Carlo risk simulation (GBM + GARCH), news sentiment scoring, and LLM‑based price predictions – all through an interactive Next.js dashboard with real‑time WebSocket updates.
