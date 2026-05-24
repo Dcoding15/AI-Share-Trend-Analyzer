@@ -1,5 +1,3 @@
-Based on your codebase (FastAPI + Next.js + Ollama) and the detailed academic project report (quantitative methods, case studies), I've synthesized a comprehensive `README.md` that unifies both. The new README accurately reflects your full‑stack architecture, AI/ML features, and the rigorous financial methodology described in the PDF (Fama‑French, technical indicators, Monte Carlo + GARCH, VADER sentiment, composite scoring).
-
 ```markdown
 # 📈 AI Share Trend Analyzer
 
@@ -238,5 +236,3 @@ This project is open source under the **MIT License**.
 **Built with ❤️ by Debajyoti Majumder, Shaptorishi Bhattacharya, Debrishti Biswas, Ayan Jana, Sandip Naskar**  
 *Brainware University – Master of Computer Applications (Computational Sciences)*
 ```
-
-This README now serves as a complete, accurate, and professional documentation for your project – merging the existing codebase with the rigorous financial methodology and case studies from your project report.
