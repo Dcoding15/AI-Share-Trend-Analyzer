@@ -231,7 +231,3 @@ This project is open source under the **MIT License**.
 - The academic authors of Fama‑French, Brock, Bollerslev, VADER, and others whose work underpins the quantitative modules  
 
 ---
-
-**Built with ❤️ by Debajyoti Majumder, Shaptorishi Bhattacharya, Debrishti Biswas, Ayan Jana, Sandip Naskar**  
-*Brainware University – Master of Computer Applications (Computational Sciences)*
-```
