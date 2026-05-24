@@ -218,16 +218,3 @@ No automated test suite is included yet. To manually verify:
 | **Long‑term (18+ mo)** | Adaptive ML composite scoring (XGBoost/LightGBM) that learns dynamic weights; alternative data (satellite, credit card, earnings call transcripts). |
 
 ---
-
-## 📄 License
-
-This project is open source under the **MIT License**.
-
-## 🙏 Acknowledgements
-
-- Yahoo Finance (`yfinance`) & News API for free data  
-- Ollama for local LLM inference  
-- shadcn/ui, Next.js, FastAPI communities  
-- The academic authors of Fama‑French, Brock, Bollerslev, VADER, and others whose work underpins the quantitative modules  
-
----
